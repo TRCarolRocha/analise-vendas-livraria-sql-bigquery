@@ -69,6 +69,7 @@ FROM `seu-projeto.LivrariaDevSaber_t3_15.Vendas` AS V
 JOIN `seu-projeto.LivrariaDevSaber_t3_15.Clientes` AS C ON V.ID_Cliente = C.ID_Cliente
 JOIN `seu-projeto.LivrariaDevSaber_t3_15.Produtos` AS P ON V.ID_Produto = P.ID_Produto
 ORDER BY V.Data_Venda;
+```
 
 ### Etapa 4: Automatizando Análises com `CREATE VIEW`
 
@@ -76,9 +77,10 @@ Uma vez que a principal consulta analítica foi definida, o passo final foi cria
 
 A solução foi encapsular toda a lógica em uma **`VIEW`**. Uma `VIEW` funciona como uma "tabela virtual" que armazena uma consulta, permitindo que qualquer pessoa no time possa acessar os dados já processados de forma simples e segura.
 
+
 **Código de Criação da View `v_relatorio_vendas_detalhado`:**
 
-``sql
+```sql
 CREATE OR REPLACE VIEW `seu-projeto.LivrariaDevSaber_t3_15.v_relatorio_vendas_detalhado` AS
 SELECT
     V.ID_Venda,
@@ -90,11 +92,13 @@ SELECT
 FROM `seu-projeto.LivrariaDevSaber_t3_15.Vendas` AS V
 JOIN `seu-projeto.LivrariaDevSaber_t3_15.Clientes` AS C ON V.ID_Cliente = C.ID_Cliente
 JOIN `seu-projeto.LivrariaDevSaber_t3_15.Produtos` AS P ON V.ID_Produto = P.ID_Produto;
+```
 
 Benefício na Prática
 Com a VIEW criada, a equipe da "Livraria DevSaber" não precisa mais se preocupar com a complexidade dos JOINs. Para ver as vendas de um cliente específico, a consulta se torna trivial:
 
-``sql
+```sql
 SELECT *
 FROM `seu-projeto.LivrariaDevSaber_t3_15.v_relatorio_vendas_detalhado`
 WHERE Nome_Cliente = 'Ana Silva';
+```
