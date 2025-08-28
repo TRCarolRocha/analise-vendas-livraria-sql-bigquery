@@ -1,0 +1,9 @@
+SELECT
+    P.Nome_Produto,
+    SUM(V.Quantidade) AS Total_Quantidade_Vendida
+FROM `t1engenhariadados.LivrariaDevSaber_t3_15.Vendas` AS V
+JOIN `t1engenhariadados.LivrariaDevSaber_t3_15.Produtos` AS P ON V.ID_Produto = P.ID_Produto
+GROUP BY P.Nome_Produto
+ORDER BY Total_Quantidade_Vendida DESC
+LIMIT 1;
+-- Resposta: Fundamentos de SQL - 2 vendas

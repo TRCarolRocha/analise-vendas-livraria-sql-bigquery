@@ -1,0 +1,13 @@
+SELECT
+    V.ID_Venda,
+    (V.Quantidade * P.Preco_Produto) AS Valor_Total
+FROM `t1engenhariadados.LivrariaDevSaber_t3_15.Vendas` AS V
+JOIN `t1engenhariadados.LivrariaDevSaber_t3_15.Produtos` AS P ON V.ID_Produto = P.ID_Produto;
+-- Respostas
+--1:	1	60
+--2:	6	42
+--3:	5	60
+--4:	2	80.5
+--5:	4	80.5
+--6:	3	150
+--* Fiquei na dúvida de o porque não trazer uma tabela com vizualização de quantidade de cada venda e valor toral. O enunciado pede o resultado final (Valor_Total_da_Venda) associado a cada entidade (ID_Venda). A parte (quantidade * preço) é apenas a "dica" ou a "fórmula" de como chegar nesse valor. As colunas Quantidade e Preco_Produto são os meios para o cálculo, mas não necessariamente o que o "cliente" (o dono da livraria) quer ver no relatório final dele.
