@@ -103,4 +103,3 @@ FROM `seu-projeto.LivrariaDevSaber_t3_15.v_relatorio_vendas_detalhado`
 WHERE Nome_Cliente = 'Ana Silva';
 ```
 Fim.
-Fim..
