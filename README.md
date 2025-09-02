@@ -1,5 +1,9 @@
 # Projeto de Data Warehouse e Análise de Vendas para a Livraria DevSaber
-
+## Integrantes do Mini projeto
+Carol Rocha
+Bruna Nascimento
+Tamires Melo
+Raquel Rios 
 ![Google BigQuery](https://img.shields.io/badge/Google_BigQuery-4285F4?style=for-the-badge&logo=google-bigquery&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-025E8C?style=for-the-badge&logo=sql&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
@@ -102,5 +106,3 @@ SELECT *
 FROM `seu-projeto.LivrariaDevSaber_t3_15.v_relatorio_vendas_detalhado`
 WHERE Nome_Cliente = 'Ana Silva';
 ```
-Fim.
-Fim!
